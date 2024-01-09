@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/exynos9810-common
+COMMON_PATH := device/samsung/exynos7570-common
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/exynos9810-common/exynos9810-common-vendor.mk)
+$(call inherit-product, vendor/samsung/exynos7570-common/exynos7570-common-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay
@@ -126,12 +126,12 @@ PRODUCT_PACKAGES += \
 
 # init
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/init/fstab.samsungexynos9810:$(TARGET_COPY_OUT_RAMDISK)/fstab.samsungexynos9810 \
-    $(COMMON_PATH)/configs/init/fstab.samsungexynos9810:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.samsungexynos9810 \
+    $(COMMON_PATH)/configs/init/fstab.samsungexynos7570:$(TARGET_COPY_OUT_RAMDISK)/fstab.samsungexynos7570 \
+    $(COMMON_PATH)/configs/init/fstab.samsungexynos7570:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.samsungexynos7570 \
     $(COMMON_PATH)/configs/init/init.homekey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.homekey.rc \
-    $(COMMON_PATH)/configs/init/init.recovery.samsungexynos9810.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.samsungexynos9810.rc \
-    $(COMMON_PATH)/configs/init/init.samsungexynos9810.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsungexynos9810.rc \
-    $(COMMON_PATH)/configs/init/init.samsungexynos9810.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsungexynos9810.usb.rc \
+    $(COMMON_PATH)/configs/init/init.recovery.samsungexynos7570.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.samsungexynos7570.rc \
+    $(COMMON_PATH)/configs/init/init.samsungexynos7570.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsungexynos7570.rc \
+    $(COMMON_PATH)/configs/init/init.samsungexynos7570.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsungexynos7570.usb.rc \
     $(COMMON_PATH)/configs/init/init.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.samsung.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(COMMON_PATH)/configs/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc

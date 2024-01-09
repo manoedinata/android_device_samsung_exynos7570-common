@@ -57,7 +57,7 @@ ro.vendor.winupdate=1
 
 ## SoC
 ro.soc.manufacturer=Samsung
-ro.soc.model "Exynos 9810"
+ro.soc.model "Exynos 7570"
 
 ### SURFACEFLINGER
 debug.sf.latch_unsignaled=1

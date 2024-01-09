@@ -17,8 +17,8 @@ vendor/etc/usb_audio_policy_configuration.xml
 -vendor/lib/libprofileparamstorage.so
 -vendor/lib/libsecaudiocoreutils.so
 -vendor/lib/libsecaudioinfo.so
--vendor/lib/vndk/libaudioroute.so;MODULE=libaudioroute.exynos9810
--vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.exynos9810
+-vendor/lib/vndk/libaudioroute.so;MODULE=libaudioroute.exynos7570
+-vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.exynos7570
 -vendor/lib64/libfloatingfeature.so
 -vendor/lib64/libsecaudioinfo.so
 
@@ -47,15 +47,15 @@ vendor/firmware/vts.bin
 
 # Bluetooth (AptX) - from crosshatch - RQ1A.201205.003
 -product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
--vendor/lib64/libbt-vendor.so;MODULE=libbt-vendor.exynos9810
+-vendor/lib64/libbt-vendor.so;MODULE=libbt-vendor.exynos7570
 
 # Camera
--vendor/lib/camera.device@1.0-impl.so;MODULE=camera.device@1.0-impl.exynos9810
--vendor/lib/camera.device@3.3-impl.so;MODULE=camera.device@3.3-impl.exynos9810
--vendor/lib/camera.device@3.5-impl.so;MODULE=camera.device@3.5-impl.exynos9810
--vendor/lib64/camera.device@1.0-impl.so;MODULE=camera.device@1.0-impl.exynos9810
--vendor/lib64/camera.device@3.3-impl.so;MODULE=camera.device@3.3-impl.exynos9810
--vendor/lib64/camera.device@3.5-impl.so;MODULE=camera.device@3.5-impl.exynos9810
+-vendor/lib/camera.device@1.0-impl.so;MODULE=camera.device@1.0-impl.exynos7570
+-vendor/lib/camera.device@3.3-impl.so;MODULE=camera.device@3.3-impl.exynos7570
+-vendor/lib/camera.device@3.5-impl.so;MODULE=camera.device@3.5-impl.exynos7570
+-vendor/lib64/camera.device@1.0-impl.so;MODULE=camera.device@1.0-impl.exynos7570
+-vendor/lib64/camera.device@3.3-impl.so;MODULE=camera.device@3.3-impl.exynos7570
+-vendor/lib64/camera.device@3.5-impl.so;MODULE=camera.device@3.5-impl.exynos7570
 
 # Camera dependencies
 -vendor/lib/libSEF.quram.so
@@ -120,12 +120,12 @@ vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
 # Gatekeeper
--vendor/lib/hw/gatekeeper.exynos9810.so
--vendor/lib64/hw/gatekeeper.exynos9810.so
+-vendor/lib/hw/gatekeeper.exynos7570.so
+-vendor/lib64/hw/gatekeeper.exynos7570.so
 
 # Gralloc
--vendor/lib/hw/gralloc.exynos9810.so
--vendor/lib64/hw/gralloc.exynos9810.so
+-vendor/lib/hw/gralloc.exynos7570.so
+-vendor/lib64/hw/gralloc.exynos7570.so
 
 # GPS/GNSS
 -vendor/bin/hw/gpsd
@@ -219,8 +219,8 @@ vendor/etc/init/mobicore.rc
 -vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 # Power
--vendor/lib/hw/power.exynos9810.so
--vendor/lib64/hw/power.exynos9810.so
+-vendor/lib/hw/power.exynos7570.so
+-vendor/lib64/hw/power.exynos7570.so
 
 # RIL - N770FXXU8FUL7
 vendor/etc/init/init.vendor.rilchip.rc|0f5f13a11c084db5dc0eb47bb693235a2273f91e
@@ -233,13 +233,13 @@ vendor/etc/plmn_se13.bin|6445f3c7ee35c59999de2fdd47c718048a3f550f
 -vendor/bin/cbd|155f94ba40e72680d6125a93ad8d8c0445eff86a
 -vendor/bin/hw/rild|e1782518a28bad77f29a2862dd40757309b8c0b0
 -vendor/lib/libaudio-ril.so|47e9bbb359a498409146d02dd6228b43410475f8
--vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos9810|4d5ee418f73e7f644220462f9c0eaefdcb54153a
+-vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos7570|4d5ee418f73e7f644220462f9c0eaefdcb54153a
 -vendor/lib/libsemnativecarrierfeature.so|a25d959ddf046b26d678011b5e1d4dd1dc09f809
 -vendor/lib64/libengmode_client.so|a7d678bad7a8c3b9729ff3d56cc35159ece548a3
 -vendor/lib64/libril-samsung.so|cf62752d95d5bd16fe2613ee0b4ab1cb5328b37c
 -vendor/lib64/libsec-ril.so|1956b2cf4fafc8c9ade6f227b5e0065f36a20b8b
 -vendor/lib64/libsec-ril-dsds.so|9ff3afd48584969f8a7590ca0f534ceb5a7d87d1
--vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos9810|f63f4a658dec8e419f5316d3d0db086bdb17d595
+-vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos7570|f63f4a658dec8e419f5316d3d0db086bdb17d595
 -vendor/lib64/libsemnativecarrierfeature.so|b9663215a8cae356b4ddf86790359beda9c30f47
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|4f803c313c74e161a871bac17581ee5f01d076ec
 -vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|38bc33189382277cd9ea0a44d2f9a8a13e91bf49
@@ -260,7 +260,7 @@ vendor/openvx/cost/cost_score.dat
 vendor/openvx/xml/_hifi_still_schedule.xml
 
 # Samsung SLSI HWC
--vendor/lib/hw/hwcomposer.exynos9810.so
+-vendor/lib/hw/hwcomposer.exynos7570.so
 -vendor/lib/libExynosHWCService.so
 -vendor/lib/libGrallocWrapper.so
 -vendor/lib/libacryl.so
@@ -269,7 +269,7 @@ vendor/openvx/xml/_hifi_still_schedule.xml
 -vendor/lib/libexynosscaler.so
 -vendor/lib/libexynosutils.so
 -vendor/lib/libexynosv4l2.so
--vendor/lib64/hw/hwcomposer.exynos9810.so
+-vendor/lib64/hw/hwcomposer.exynos7570.so
 -vendor/lib64/libExynosHWCService.so
 -vendor/lib64/libGrallocWrapper.so
 -vendor/lib64/libacryl.so
@@ -281,8 +281,8 @@ vendor/openvx/xml/_hifi_still_schedule.xml
 -vendor/lib64/libmpp.so
 
 # Samsung SLSI Memtrack
--vendor/lib64/hw/memtrack.exynos9810.so
--vendor/lib/hw/memtrack.exynos9810.so
+-vendor/lib64/hw/memtrack.exynos7570.so
+-vendor/lib/hw/memtrack.exynos7570.so
 
 # Secnative
 -vendor/lib/libsecnativefeature.so

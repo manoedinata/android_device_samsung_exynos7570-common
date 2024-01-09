@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/exynos9810-common
+COMMON_PATH := device/samsung/exynos7570-common
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -22,7 +22,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 ## Inherit proprietary vendor configuration
-include vendor/samsung/exynos9810-common/BoardConfigVendor.mk
+include vendor/samsung/exynos7570-common/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := arm64
@@ -65,7 +65,7 @@ TARGET_SEC_FP_HAS_FINGERPRINT_GESTURES := true
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos9810
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos7570
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_LLVM_BINUTILS := false
@@ -95,10 +95,10 @@ BOARD_ROOT_EXTRA_FOLDERS := efs
 
 ## Platform
 BOARD_VENDOR := samsung
-TARGET_BOARD_PLATFORM := universal9810
+TARGET_BOARD_PLATFORM := universal7570
 TARGET_SLSI_VARIANT := bsp
-TARGET_SOC := exynos9810
-TARGET_BOOTLOADER_BOARD_NAME := exynos9810
+TARGET_SOC := exynos7570
+TARGET_BOOTLOADER_BOARD_NAME := exynos7570
 
 ## Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
@@ -109,7 +109,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.samsungexynos9810
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.samsungexynos7570
 
 ## Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
